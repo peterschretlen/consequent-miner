@@ -124,6 +124,9 @@ function generateRules(summary, options, cb){
 	_.mapKeys( summary.antecedent, function(v_antecedent, k_antecedent){
 		_.mapKeys( v_antecedent.consequent, function(v_consequent, k_consequent){
 
+			console.log(options.exclusions, k_consequent, _.indexOf(options.exclusions, k_consequent));
+			if( _.indexOf(options.exclusions, k_consequent) > -1) return;
+
 			var meets_all_thresholds = _.every(  _(options.thresholds).toPairs().map( function(threshold) {
 				var threshold_name = threshold[0];
 				var threshold_value = threshold[1];

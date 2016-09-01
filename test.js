@@ -14,10 +14,14 @@ var options = {
 miner.mine('./test.ldjson', options, function(err, summary){
 
     var rules = miner.generateRules(summary, options);
-
     _.map(rules, r => console.log(JSON.stringify(r)));
-
     assert.equal(16, rules.length);
+
+    //can apply options at rule generation time
+    options.exclusions.push("rhs3");
+    rules = miner.generateRules(summary, options);
+    _.map(rules, r => console.log(JSON.stringify(r)));
+    assert.equal(12, rules.length);
     
 });
 
