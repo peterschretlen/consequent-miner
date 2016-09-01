@@ -1,6 +1,6 @@
 {
   "name": "consequent-miner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Mines association rules (if X -> then Y) when you know the antecedent (X) but not the consequent (Y)",
   "main": "index.js",
   "keywords": [
