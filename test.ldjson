@@ -1,10 +1,10 @@
-{ "antecedent": "1" , "values": ["a", "b", "c", "d"] }
-{ "antecedent": "2" , "values": ["e", "f", "g", "h"] }
-{ "antecedent": "3" , "values": ["i", "a", "b", "c"] }
-{ "antecedent": "4" , "values": ["d", "e", "f", "g"] }
-{ "antecedent": "1" , "values": ["h", "i", "a", "b"] }
-{ "antecedent": "2" , "values": ["c", "d", "e", "f"] }
-{ "antecedent": "3" , "values": ["g", "h", "i", "a"] }
-{ "antecedent": "4" , "values": ["b", "c", "d", "e"] }
-{ "antecedent": "1" , "values": ["f", "g", "h", "i"] }
-{ "antecedent": "2" , "values": ["a", "b", "c", "d"] }
+{ "lhs1": "1" , "lhs2": "1" , "rhs1": "abc" , "rhs2" : "dog", 	"rhs3" : ["a", "b", "c", "d"] , "rhs4" : "dog" }
+{ "lhs1": "2" , "lhs2": "2" , "rhs1": "xyz" ,                	"rhs3" : ["e", "f", "g", "h"]                  }
+{ "lhs1": "3" , "lhs2": "3" , "rhs1": "abc" , "rhs2" : "bird", 	"rhs3" : ["i", "a", "b", "c"] , "rhs4" : "bird"}
+{ "lhs1": "4" , "lhs2": "4" , "rhs1": "xyz" , "rhs2" : "fish", 	"rhs3" : ["d", "e", "f", "g"] , "rhs4" : "fish"}
+{ "lhs1": "1" , "lhs2": "1" , "rhs1": "abc" , "rhs2" : "dog", 	"rhs3" : ["h", "i", "a", "b"]                  }
+{ "lhs1": "2" , "lhs2": "2" , "rhs1": "xyz" ,                	"rhs3" : ["c", "d", "e", "f"] , "rhs4" : "cat" }
+{ "lhs1": "3" , "lhs2": "3" , "rhs1": "abc" , "rhs2" : "bird", 	"rhs3" : ["g", "h", "i", "a"] , "rhs4" : "bird"}
+{ "lhs1": "4" , "lhs2": "4" , "rhs1": "xyz" , "rhs2" : "fish", 	"rhs3" : ["b", "c", "d", "e"] , "rhs4" : "fish"}
+{ "lhs1": "1" , "lhs2": "1" , "rhs1": "123" , "rhs2" : "rat", 	"rhs3" : ["f", "g", "h", "i"]                  }
+{ "lhs1": "2" , "lhs2": "2" , "rhs1": "xyz" , "rhs2" : "cat", 	"rhs3" : ["a", "b", "c", "d"]                  }
