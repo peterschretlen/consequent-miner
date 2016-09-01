@@ -1,5 +1,5 @@
 # consequent-miner
-Mines association rules (if X -> then Y) when you know the antecedent or left hand side (X) but not the consequent or right hand side (Y)
+Mines [association rules](https://en.wikipedia.org/wiki/Association_rule_learning) (if X -> then Y) when you know the antecedent or left hand side (X) but not the consequent or right hand side (Y)
 
 # Input Format
 The process takes a set of line-delimited JSON (LDJSON) objects. At the moment each object must be flat (no nested objects, though arrays are OK). 
