@@ -1,0 +1,10 @@
+{ "antecedent": "1" , "values": ["a", "b", "c", "d"] }
+{ "antecedent": "2" , "values": ["e", "f", "g", "h"] }
+{ "antecedent": "3" , "values": ["i", "a", "b", "c"] }
+{ "antecedent": "4" , "values": ["d", "e", "f", "g"] }
+{ "antecedent": "1" , "values": ["h", "i", "a", "b"] }
+{ "antecedent": "2" , "values": ["c", "d", "e", "f"] }
+{ "antecedent": "3" , "values": ["g", "h", "i", "a"] }
+{ "antecedent": "4" , "values": ["b", "c", "d", "e"] }
+{ "antecedent": "1" , "values": ["f", "g", "h", "i"] }
+{ "antecedent": "2" , "values": ["a", "b", "c", "d"] }

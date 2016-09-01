@@ -1,0 +1,30 @@
+{
+  "name": "consequent-miner",
+  "version": "0.1.0",
+  "description": "Mines association rules (if X -> then Y) when you know the antecedent (X) but not the consequent(Y)",
+  "main": "index.js",
+  "keywords": [
+    "data mining",
+    "association rules"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterschretlen/consequent-miner.git"
+  },
+  "author": "Peter Schretlen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterschretlen/consequent-miner/issues"
+  },
+  "homepage": "https://github.com/peterschretlen/consequent-miner#readme",
+  "dependencies": {
+    "byline": "^5.0.0",
+    "lodash": "^4.15.0",
+    "pump": "^1.0.1",
+    "pumpify": "^1.3.5",
+    "through2": "^2.0.1"
+  }
+}
