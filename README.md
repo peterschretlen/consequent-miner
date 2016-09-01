@@ -22,22 +22,22 @@ For example:
 
 The output is a set of association rules along with their signficance metrics. For the sample above, rules generated are:
 ```
-{"if": "1" , "then": "rhs1", "freq": 3, "confidence": 1,  "lift":3.3,"ndistinct":2,"pdistinct":0.67}
-{"if": "1" , "then": "rhs2", "freq": 3, "confidence": 1,  "lift":3.3,"ndistinct":2,"pdistinct":0.4}
-{"if": "1" , "then": "rhs3", "freq": 3, "confidence": 1,  "lift":3.3,"ndistinct":8,"pdistinct":0.89}
-{"if": "1" , "then": "rhs4", "freq": 1, "confidence": 0.3,"lift":3.3,"ndistinct":1,"pdistinct":0.25}
-{"if": "2" , "then": "rhs1", "freq": 3, "confidence": 1,  "lift":3.3,"ndistinct":1,"pdistinct":0.33}
-{"if": "2" , "then": "rhs3", "freq": 3, "confidence": 1,  "lift":3.3,"ndistinct":8,"pdistinct":0.89}
-{"if": "2" , "then": "rhs4", "freq": 1, "confidence": 0.3,"lift":3.3,"ndistinct":1,"pdistinct":0.25}
-{"if": "2" , "then": "rhs2", "freq": 1, "confidence": 0.3,"lift":3.3,"ndistinct":1,"pdistinct":0.2}
-{"if": "3" , "then": "rhs1", "freq": 2, "confidence": 1,  "lift":5,  "ndistinct":1,"pdistinct":0.33}
-{"if": "3" , "then": "rhs2", "freq": 2, "confidence": 1,  "lift":5,  "ndistinct":1,"pdistinct":0.2}
-{"if": "3" , "then": "rhs3", "freq": 2, "confidence": 1,  "lift":5,  "ndistinct":6,"pdistinct":0.67}
-{"if": "3" , "then": "rhs4", "freq": 2, "confidence": 1,  "lift":5,  "ndistinct":1,"pdistinct":0.25}
-{"if": "4" , "then": "rhs1", "freq": 2, "confidence": 1,  "lift":5,  "ndistinct":1,"pdistinct":0.33}
-{"if": "4" , "then": "rhs2", "freq": 2, "confidence": 1,  "lift":5,  "ndistinct":1,"pdistinct":0.2}
-{"if": "4" , "then": "rhs3", "freq": 2, "confidence": 1,  "lift":5,  "ndistinct":6,"pdistinct":0.67}
-{"if": "4" , "then": "rhs4", "freq": 2, "confidence": 1,  "lift":5,  "ndistinct":1,"pdistinct":0.25}
+{"if": "1" , "then": "rhs1", "freq": 3, "confidence": 1,   "lift":3.3, "ndistinct":2, "pdistinct": 0.67 }
+{"if": "1" , "then": "rhs2", "freq": 3, "confidence": 1,   "lift":3.3, "ndistinct":2, "pdistinct": 0.4  }
+{"if": "1" , "then": "rhs3", "freq": 3, "confidence": 1,   "lift":3.3, "ndistinct":8, "pdistinct": 0.89 }
+{"if": "1" , "then": "rhs4", "freq": 1, "confidence": 0.3, "lift":3.3, "ndistinct":1, "pdistinct": 0.25 }
+{"if": "2" , "then": "rhs1", "freq": 3, "confidence": 1,   "lift":3.3, "ndistinct":1, "pdistinct": 0.33 }
+{"if": "2" , "then": "rhs3", "freq": 3, "confidence": 1,   "lift":3.3, "ndistinct":8, "pdistinct": 0.89 }
+{"if": "2" , "then": "rhs4", "freq": 1, "confidence": 0.3, "lift":3.3, "ndistinct":1, "pdistinct": 0.25 }
+{"if": "2" , "then": "rhs2", "freq": 1, "confidence": 0.3, "lift":3.3, "ndistinct":1, "pdistinct": 0.2  }
+{"if": "3" , "then": "rhs1", "freq": 2, "confidence": 1,   "lift":5,   "ndistinct":1, "pdistinct": 0.33 }
+{"if": "3" , "then": "rhs2", "freq": 2, "confidence": 1,   "lift":5,   "ndistinct":1, "pdistinct": 0.2  }
+{"if": "3" , "then": "rhs3", "freq": 2, "confidence": 1,   "lift":5,   "ndistinct":6, "pdistinct": 0.67 }
+{"if": "3" , "then": "rhs4", "freq": 2, "confidence": 1,   "lift":5,   "ndistinct":1, "pdistinct": 0.25 }
+{"if": "4" , "then": "rhs1", "freq": 2, "confidence": 1,   "lift":5,   "ndistinct":1, "pdistinct": 0.33 }
+{"if": "4" , "then": "rhs2", "freq": 2, "confidence": 1,   "lift":5,   "ndistinct":1, "pdistinct": 0.2  }
+{"if": "4" , "then": "rhs3", "freq": 2, "confidence": 1,   "lift":5,   "ndistinct":6, "pdistinct": 0.67 }
+{"if": "4" , "then": "rhs4", "freq": 2, "confidence": 1,   "lift":5,   "ndistinct":1, "pdistinct": 0.25 }
 ``` 
 The [significance metrics](https://en.wikipedia.org/wiki/Association_rule_learning#Useful_Concepts) are: 
  - `freq` : how often the rule occurs.
