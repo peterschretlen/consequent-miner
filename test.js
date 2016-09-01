@@ -11,10 +11,10 @@ var options = {
     }
 };
     
-miner.mine('./test.ldjson', options, function(err, rules){
+miner.mine('./test.ldjson', options, function(err, summary){
 
-    //console.log(JSON.stringify(rules, null, 2));
-    
+    var rules = miner.generateRules(summary, options);
+
     _.map(rules, r => console.log(JSON.stringify(r)));
 
     assert.equal(16, rules.length);

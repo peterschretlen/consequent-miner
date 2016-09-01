@@ -1,14 +1,13 @@
 {
   "name": "consequent-miner",
-  "version": "0.1.0",
-  "description": "Mines association rules (if X -> then Y) when you know the antecedent (X) but not the consequent(Y)",
+  "version": "0.0.2",
+  "description": "Mines association rules (if X -> then Y) when you know the antecedent (X) but not the consequent (Y)",
   "main": "index.js",
   "keywords": [
-    "data mining",
     "association rules"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",

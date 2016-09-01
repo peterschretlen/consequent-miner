@@ -116,11 +116,11 @@ function measureSignificance(summary){
 
 }
 
-function generateRules(summary, options){
+function generateRules(summary, options, cb){
 
 	var rules = [];
-	
 
+	console.log("GENERATING RULES..." );
 	_.mapKeys( summary.antecedent, function(v_antecedent, k_antecedent){
 		_.mapKeys( v_antecedent.consequent, function(v_consequent, k_consequent){
 
@@ -146,6 +146,11 @@ function generateRules(summary, options){
 		});
 	});
 
+	console.log("COMPLETED WITH ", rules.length, "RULES GENERATED" );
+
+	if(cb)
+		cb(null, rules);
+
 	return rules;
 }
 
@@ -162,15 +167,12 @@ var mineRules = function(file, options, cb){
 		console.log("MEASURING SIGNFICANCE VALUES..." );
 		measureSignificance(summary);
 
-		console.log("GENERATING RULES..." );
-		var rules = generateRules(summary, options);
-		
-		console.log("COMPLETED WITH ", rules.length, "RULES GENERATED" );
-		cb(null, rules);
-
+		cb(null, summary);
 	});
 
 };
 
+
 module.exports.mine = mineRules;
+module.exports.generateRules = generateRules;
 
