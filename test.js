@@ -22,7 +22,12 @@ miner.mine('./test.ldjson', options, function(err, summary){
     rules = miner.generateRules(summary, options);
     _.map(rules, r => console.log(JSON.stringify(r)));
     assert.equal(12, rules.length);
-    
+   
+    //put summary in tidy form
+    var tidySummary = miner.tidySummary(summary);
+    assert.equal(16, tidySummary.association.length);
+    assert.equal(4, tidySummary.consequent.length);
+
 });
 
 

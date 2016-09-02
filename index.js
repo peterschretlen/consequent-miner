@@ -116,6 +116,47 @@ function measureSignificance(summary){
 
 }
 
+
+function tidySummary(summary){
+
+	var tidy_summary = { association :[], consequent : [] };
+
+	var flatten = function(o, array){
+		_.mapKeys( o, function(v, k){
+			var clone = _.clone(v);
+			clone.name = k;
+
+			var booleanHasNesting = false;
+			_.mapKeys( clone, function(nested_v, nested_k) {
+				if(!_.isPlainObject(nested_v)) return;
+
+				booleanHasNesting = true;
+
+				//remove the value we are going to flatten
+				_.unset(clone, nested_k);
+
+				var nestedArray = [];
+				flatten(nested_v, nestedArray);
+				_.map(nestedArray, function(a){
+					var copy = _.clone(clone);
+					_.merge(copy, _.mapKeys(a, (v,k) => 'c_' + k ));
+					array.push( copy );
+				});
+
+			});
+
+			if(!booleanHasNesting)
+				array.push( clone );
+		});
+	};
+
+	flatten(summary.antecedent, tidy_summary.association);
+	flatten(summary.consequent, tidy_summary.consequent);
+
+	return tidy_summary;
+
+}
+
 function generateRules(summary, options, cb){
 
 	var rules = [];
@@ -177,4 +218,5 @@ var mineRules = function(file, options, cb){
 
 module.exports.mine = mineRules;
 module.exports.generateRules = generateRules;
+module.exports.tidySummary = tidySummary;
 
