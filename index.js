@@ -103,7 +103,7 @@ function measureSignificance(summary){
 		_.mapKeys( v_antecedent.consequent, function(v_consequent, k_consequent) {
 			v_consequent.support 	= v_consequent.freq / summary.transactions;
 			v_consequent.confidence = v_consequent.support / v_antecedent.support;
-			v_consequent.lift 		= v_consequent.support / ( v_consequent.support * v_antecedent.support );
+			v_consequent.lift 		= v_consequent.support / ( summary.consequent[k_consequent].support * v_antecedent.support );
 
 			//how many distinct values for the consequent when this rules is applied?
 			v_consequent.ndistinct  = v_consequent.values.length;
@@ -124,7 +124,6 @@ function generateRules(summary, options, cb){
 	_.mapKeys( summary.antecedent, function(v_antecedent, k_antecedent){
 		_.mapKeys( v_antecedent.consequent, function(v_consequent, k_consequent){
 
-			console.log(options.exclusions, k_consequent, _.indexOf(options.exclusions, k_consequent));
 			if( _.indexOf(options.exclusions, k_consequent) > -1) return;
 
 			var meets_all_thresholds = _.every(  _(options.thresholds).toPairs().map( function(threshold) {
